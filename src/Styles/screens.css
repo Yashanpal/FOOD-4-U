@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+/*{ This is for Signup And Login}*/
+.form-box {
+  width: 24%;
+  border: 5px solid #fdfdfd; /* Brownish color similar to the image */
+  box-shadow: 5px 5px 15px #547d9e, -5px -5px 15px rgb(95, 143, 143);
+  height: 700px;
+  position: relative;
+  border-radius: 20px;
+  padding: 50px 60px 70px;
+  text-align: center;
+  z-index: 5;
+}
+
+.form-box p {
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  text-align: center;
+  font-size: medium;
+}
+.form-box h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+.form-box h1::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translate(-50%);
+  background: rgb(255, 255, 255);
+}
+.input-field {
+  margin: 15px 0;
+  border-radius: 3px;
+  align-items: center;
+  display: flex;
+
+  background: rgb(255, 255, 255);
+  max-height: 60px;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+.input-field::placeholder {
+  color: #000000;
+}
+
+.input-group {
+  margin-left: 0px;
+}
+input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
+  background: transparent;
+}
+.input-field i {
+  margin-left: 15px;
+  padding: 5px 5px 5px 5px;
+}
+
+.btno {
+  margin-top: 15px;
+  width: 80%;
+  justify-content: space-between;
+  display: flex;
+}
+.btno button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 55px;
+  padding: 5px;
+  font-size: medium;
+  justify-content: space-between;
+  flex: 10%;
+  background: rgb(255, 255, 255);
+  color: #0a0a0a;
+  font-style: bold;
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: 1s;
+}
+
+/*{For login page background}*/
+
+.Login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 100% of the viewport height */
+}
+
+.Login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(SignUp.jpg);
+  filter: brightness(80%) contrast(120%);
+  z-index: -1; /* Send the pseudo-element to the background */
+  background-size:100% 100%;
+}
+
+.form-box {
+  position: relative;
+  background: transparent;
+  backdrop-filter: blur(15px);
+}
+
+.form-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}
+
+/*{For home backgound image}*/
+
+.Home {
+  position: relative;
+}
+
+.Home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(Home.jpg);
+
+  filter: brightness(80%) contrast(120%);
+  z-index: -1; /* Send the pseudo-element to the background */
+  background-size: contain;
+}
+
+/*{For MyOrder backgound image}*/
+
+.MyOrder {
+  position: relative;
+}
+
+.MyOrder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(order.jpg);
+  filter: brightness(70%) contrast(120%);
+  z-index: -1; /* Send the pseudo-element to the background */
+  background-size: contain;
+}
+
+.MyOrder-Card {
+  position: relative;
+  background: transparent;
+  backdrop-filter: blur(3px);
+}
+
+.MyOrder-Card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}
+/*{ Css property when we search in carousel and there is no such category }*/
+.NoCategory {
+  position: relative;
+  background: transparent;
+  backdrop-filter: blur(3px);
+}
+
+.NoCategory::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}
+
+@keyframes oopsAnimation {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+.NoCategory {
+  animation: oopsAnimation 2s ease-in-out;
+}
+
+.Oops {
+  animation: oopsAnimation 5s ease-in-out;
+  animation-delay: 2s;
+}
